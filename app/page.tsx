@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Grid from './components/Grid';
 
 export default function page() {
   return (
-    <section className='py-24'>
-      <div className='container'>
-        <h1 className='text-3xl font-bold'>Project template</h1>
-      </div>
-    </section>
-  )
+    <main>
+      <Grid />
+    </main>
+  );
 }
