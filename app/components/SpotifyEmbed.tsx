@@ -1,4 +1,3 @@
-// SpotifyEmbed.tsx
 import React from 'react';
 
 interface SpotifyEmbedProps {
@@ -7,12 +6,16 @@ interface SpotifyEmbedProps {
   height?: string;
 }
 
-const SpotifyEmbed: React.FC<SpotifyEmbedProps> = ({ albumId, width = "100%", height = "352" }) => {
+const SpotifyEmbed: React.FC<SpotifyEmbedProps> = ({
+  albumId,
+  width = "100%",
+  height = "100%" // Changed to relative unit
+}) => {
   const iframeSrc = `https://open.spotify.com/embed/album/${albumId}?utm_source=generator`;
 
   return (
     <iframe
-      style={{width, height }}
+      className="w-full h-full p-6"
       src={iframeSrc}
       frameBorder="0"
       allowFullScreen
